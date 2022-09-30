@@ -14,6 +14,10 @@ function writePassword() {
 
 function generatePassword(){
   var num = prompt("How many characters would you like your password to contain?");
+  if (num < 8 || num > 128){
+    alert(" At least 8 characters and no more thatn 128 characters");
+    num = prompt("How many characters would you like your password to contain?");
+  }
   var specialChar = confirm("Click OK to confirm including special characters");
   var numChar = confirm("Click OK to confirm including numerica characters");
   var upCase = confirm("Click OK to confirm including upperercase characters");
